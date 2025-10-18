@@ -5,7 +5,10 @@ from colorama import Fore, Style, init
 # Initialize colorama for cross-platform colored output
 init(autoreset=True)
 
-def display_directory_structure(directory_path, indent_level=0):
+def display_directory_structure(directory_path: Path, indent_level: int = 0):
+    """
+    Display the directory structure in a tree-like format with colored output.
+    """
     try:
         # Create indentation string
         indent = "    " * indent_level
