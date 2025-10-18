@@ -1,3 +1,5 @@
+from pprint import pprint
+
 # Function to read cat information from a file and return it as a list of dictionaries
 def get_cats_info(path: str) -> list[dict[str, str]]:
     cats_list = []
@@ -44,7 +46,7 @@ def get_cats_info(path: str) -> list[dict[str, str]]:
 # Example usage:
 
 cats_info = get_cats_info("path/to/cats_file.txt")
-print(cats_info)
+pprint(cats_info)
 
 cats_info_error = get_cats_info("path/to/cats_file_1.txt") # Example with invalid data
-print(cats_info_error) # Error: File 'path/to/cats_file_1.txt' not found
+pprint(cats_info_error) # Error: File 'path/to/cats_file_1.txt' not found
